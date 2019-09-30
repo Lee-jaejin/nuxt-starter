@@ -17,6 +17,39 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  modules: [
+    ['nuxt-i18n', {
+      locales: [
+        {
+          code: 'ko',
+          iso: 'ko-KR',
+          name: '한국어',
+          file: 'ko.js'
+        },
+        {
+          code: 'en',
+          iso: 'en-US',
+          name: 'English',
+          file: 'en.js'
+        },
+        {
+          code: 'cn',
+          iso: 'zh-CN',
+          name: '简体中文',
+          file: 'cn.js'
+        }
+      ],
+      defaultLocale: 'ko',
+      lazy: true,
+      langDir: 'languages/',
+      vuex: {
+        moduleName: 'i18n',
+        syncLocale: true,
+        syncMessages: true,
+        syncRouteParams: true
+      }
+    }]
+  ],
   /*
   ** Build configuration
   */
